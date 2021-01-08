@@ -5,12 +5,19 @@ import './App.css';
 import axios from 'axios';
 
 const Notification = (props) => {
+  const newAlert = () => {
+    props.setNotification(false);
+    props.setEmail('');
+    props.setCoin('bitcoin');
+    props.setPrice('');
+    props.setAlertType('low');
+  }
   return (
     <div className="notification">
           <h1>Crypto price alerts</h1>
     <h3>Get notified when coin goes over or below target price.</h3>
       <h3 className="notification-message">We will sent you a notification when {props.coin} goes {props.alertType == 'low' ? 'below' : 'over' } {props.price} €.</h3>
-        <button className="low-button" onClick={()=>{props.setNotification(false)}}>New alert</button>
+        <button className="low-button" onClick={()=>{newAlert()}}>New alert</button>
     </div>
   )
 }
@@ -36,7 +43,7 @@ const CoinTable = (props) => {
         
          {props.data.map((row)=> {
            return (
-             <tr>
+             <tr key={row.name}>
                <td><img src={row.image.thumb} alt=""/>{row.name} </td>
                <td>{row.market_data.current_price.eur}</td>
                <td>{row.market_data.market_cap.eur}</td> 
@@ -99,7 +106,7 @@ function App() {
     <div className="App">
     <div className="blackdiv">
     <div className="main-container">
-    {notification ? <Notification price={price} coin={coin} alertType={alertType} setNotification={setNotification}></Notification> : 
+    {notification ? <Notification price={price} coin={coin} alertType={alertType} setAlertType={setAlertType} setEmail={setEmail} setNotification={setNotification} setPrice={setPrice} setCoin={setCoin} ></Notification> : 
     <div>
     <h1>Crypto price alerts</h1>
     <h3>Get notified when coin goes over or below target price.</h3>
