@@ -20,7 +20,7 @@ exports.newLowPriceAlert = (req, res) => {
         console.log('alert!');
           // send mail with defined transport object
    transporter.sendMail({
-    from: '"Crypto Price Alerts" <henri@henriparviainen.com>', // sender email
+    from: `"Crypto Price Alerts" <${process.env.EMAIL}>`, // sender email
     to: req.body.email, // receiver email
     subject: `new ${req.body.ids} price alert`, // Subject line// plain text body
     html: `<div style="padding:20px; text-align:left;">
@@ -58,7 +58,7 @@ exports.newHighPriceAlert = (req, res) => {
         console.log('alert!');
           // send mail with defined transport object
    transporter.sendMail({
-    from: '"Crypto Price Alerts" <henri@henriparviainen.com>', // sender address
+    from: `"Crypto Price Alerts" <${process.env.EMAIL}>`, // sender address
     to: req.body.email, // list of receivers
     subject: `new ${req.body.ids} price alert`, // Subject line
     html: `<div style="padding:auto; text-align:left; height:100%;">
