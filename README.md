@@ -11,7 +11,7 @@ Crypto price alerts uses [Coingecko API](https://www.coingecko.com/en/api) for t
 
 Before you can start using the app you'll need the following:  
 1. Get Mailjet account (Or any other email server account eg. Sendgrid, Mailgun etc..)  
-You can create free account€€ on www.mailjet.com  
+You can create free account on www.mailjet.com  
 
 2. Get SMTP credentials (comes with Mailjet)  
 
