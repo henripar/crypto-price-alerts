@@ -6,6 +6,8 @@ Application will notify user by email when the selected crypto token will hit de
 
 Crypto price alerts uses [Coingecko API](https://www.coingecko.com/en/api) for the data.
 
+React frontend with express REST API backend.
+
 
 ## Setup
 
