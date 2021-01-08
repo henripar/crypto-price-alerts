@@ -43,7 +43,7 @@ Run `node server.js` in backend folder and `npm start` in crypto_alert folder to
 
 ## Important notes  
 
-*This application is only for testing purposes. You shouldn't trust in any serious crypto trading. *
+*This application is only for testing purposes. You shouldn't trust in any serious crypto trading.*
 
 *This app is not using any database, so once you shut down the server, app is not going to be able to continue tracking ongoing price requests once the server restarts.*
 
