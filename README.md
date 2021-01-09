@@ -1,13 +1,15 @@
 # crypto-price-alerts
 
+<p align="left">
+<img src="https://img.shields.io/badge/react%20-%2320232a.svg?&style=for-the-badge&logo=react&logoColor=%2361DAFB"/> &nbsp;
+	<img src="https://img.shields.io/badge/express.js%20-%23404d59.svg?&style=for-the-badge"/> </br>
+</p>
+
 Small fullstack web app that allows you to set price alerts on Cryptocurrency tokens.
 
 Application will notify user by email when the selected crypto token will hit desired price.
 
 Crypto price alerts uses [Coingecko API](https://www.coingecko.com/en/api) for the data.
-
-React frontend with express REST API backend.
-
 
 ## Setup
 
